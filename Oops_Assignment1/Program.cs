@@ -60,7 +60,7 @@
             {
                 Console.WriteLine($"Total Marks of {student.Name} is: {student.sum}");
             }
-            Console.WriteLine();
+            Console.WriteLine("----------------------------------------------------------------------");
             //(1.b)
             int topScore = 0;
             Student topScorer = null;
@@ -73,7 +73,8 @@
                 }
             }
             Console.WriteLine($"Top Scorer: {topScorer.Name} (Roll Number: {topScorer.RollNo}), Total Marks: {topScorer.sum}");
-            Console.WriteLine();
+            Console.WriteLine("----------------------------------------------------------------------");
+
             //(1.c)
             int totalMathMarks = 0;
             int totalScienceMarks = 0;
@@ -97,7 +98,7 @@
             double averageSocialMarks = (double)totalSocialMarks / n;
 
             Console.WriteLine($"Average Marks of Each Subject:  Maths: {averageMathMarks}  Science: {averageScienceMarks}  English: {averageEnglishMarks}  Language: {averageLanguageMarks} Social: {averageSocialMarks}");
-            Console.WriteLine() ;
+            Console.WriteLine("----------------------------------------------------------------------");
             //(1.d)
             int pass = 0;
             int fail = 0;
@@ -174,6 +175,7 @@
 
         public void Task4(int roll)
         {
+            Console.WriteLine($"ScoreCard of student:-");
             foreach (Student student in students)
             {
                 if (roll == student.RollNo)
@@ -226,13 +228,13 @@
         {
             ScoreCard card = new ScoreCard();
             card.AcceptDetails();
-            Console.WriteLine();
+            Console.WriteLine("----------------------------------------------------------------------");
             card.Task1();
-            Console.WriteLine();
+            Console.WriteLine("----------------------------------------------------------------------");
             card.Task2();
-            Console.WriteLine();
+            Console.WriteLine("----------------------------------------------------------------------");
             card.Task3();
-            Console.WriteLine();
+            Console.WriteLine("----------------------------------------------------------------------");
             Console.WriteLine("Enter a Roll Number:");
             int roll = int.Parse(Console.ReadLine());
             card.Task4(roll);
